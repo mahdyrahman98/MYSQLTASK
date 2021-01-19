@@ -1,0 +1,70 @@
+1)SELECT COUNT(CountryCode)
+FROM city
+WHERE countrycode='USA';
+
+2)SELECT name, population, lifeExpectancy
+FROM country
+WHERE name= 'argentina';
+
+3) SELECT name, lifeExpectancy
+FROM country
+WHERE lifeExpectancy IS NOT NULL
+ORDER BY lifeExpectancy DESC
+LIMIT 1;
+
+4)SELECT o.Code, c.CountryCode c.Name
+FROM city c
+JOIN country o ON c.CountryCode=o.Code;
+
+5)
+
+6)SELECT name
+FROM city
+WHERE name LIKE 'f%'
+LIMIT 25;
+
+7)
+
+8)SELECT name, population
+FROM country
+WHERE Population IS NOT NULL
+ORDER BY Population ASC
+LIMIT 20;
+
+
+9)SELECT COUNT(name)
+FROM country;
+
+10)SELECT name, SurfaceArea
+FROM country
+WHERE SurfaceArea IS NOT NULL
+ORDER BY SurfaceArea DESC
+LIMIT 10;
+
+11)SELECT CountryCode, population
+FROM city
+WHERE population IS NOT NULL
+ORDER BY Population DESC
+WHERE CountryCode='JPN'
+LIMIT 5;
+
+12)spelling mistake on Elizabeth II, it says Elisabeth II
+UPDATE country
+SET HeadOfState='Elizabeth II'
+WHERE HeadOfState='Elisabeth II';
+SELECT code, name, HeadOfState
+FROM country
+WHERE HeadOfState='Elizabeth II';
+
+13)
+
+14)SELECT DISTINCT language
+FROM countrylanguage;
+
+15)SELECT name, GNP
+FROM country
+ORDER BY GNP DESC
+lIMIT 10;
+
+16)
+
