@@ -1,0 +1,106 @@
+1) SELECT first_name, last_name
+FROM actor;
+
+2)SELECT first_name, last_name
+FROM actor
+WHERE first_name='john';
+
+3)SELECT first_name, last_name
+FROM actor
+WHERE last_name='neeson';
+
+4)** SELECT actor_id/10, first_name, last_name
+FROM actor
+AS is_int;
+
+5)SELECT film_id, description, title
+FROM film
+WHERE film_id=100;
+
+6)SELECT title, rating
+FROM film
+WHERE rating='r';
+
+7)SELECT title, rating
+FROM film
+WHERE rating!='r';
+
+8)SELECT title, length
+FROM film
+ORDER BY length ASC
+LIMIT 10;
+
+9)SELECT title, length 
+FROM film
+ORDER BY length DESC;
+
+10)SELECT title, description
+FROM film
+WHERE description='delete%'
+
+11)SELECT last_name
+FROM actor 
+GROUP BY last_name
+HAVING last_name<1
+ORDER BY last_name DESC;
+
+12)SELECT last_name
+FROM actor 
+GROUP BY last_name
+HAVING last_name>1
+ORDER BY COUNT last_name DESC;
+
+13)
+
+14)
+
+15)SELECT AVG(length) 
+FROM film;
+
+16)SELECT title, category, 
+AVG(length) AS avg_length
+FROM film_list;
+GROUP BY category; 
+
+17)SELECT title, description
+FROM film
+WHERE description='robot';
+
+18)SELECT COUNT(title)
+FROM film
+WHERE release_year=2010;
+
+19)SELECT title, category
+FROM film_list
+WHERE category='horror';
+
+20)SELECT first_name, last_name, staff_id
+FROM staff
+WHERE staff_id=2;
+
+21)SELECT first_name, last_name, film_info
+FROM actor_info
+WHERE first_name='FRED';
+
+22)SELECT DISTINCT country
+FROM country;
+
+23)SELECT name
+FROM language
+ORDER BY name DESC;
+
+24)SELECT first_name, last_name
+FROM actor
+WHERE last_name=(
+SELECT last_name
+FROM actor
+WHERE last_name LIKE '%son'
+);
+
+25)SELECT category, COUNT(category) AS amount
+FROM film_list
+GROUP BY category
+ORDER BY amount DESC;
+
+
+
